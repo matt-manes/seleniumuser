@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seleniumuser"
+authors = [{name="Matt Manes"}]
+description = "Selenium wrapper to streamline usage."
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = [
+
+	"bs4~=0.0.1",
+	"selenium~=4.5.0",
+	"noiftimer~=1.0.1",
+	"voxscribe~=1.0.0",
+	"whosyouragent~=1.0.3"
+]
+keywords = [
+    "selenium",
+    "automation",
+    "webscraping"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/matt-manes/seleniumuser"
+"Documentation" = "https://github.com/matt-manes/seleniumuser/tree/main/docs"
+"Source code" = "https://github.com/matt-manes/seleniumuser/tree/main/src/seleniumuser"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = "src"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    ".coverage",
+    ".pytest_cache",
+    ".vscode",
+    "tests"
+]

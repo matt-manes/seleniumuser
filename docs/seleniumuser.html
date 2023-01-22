@@ -1,0 +1,2408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>seleniumuser.seleniumuser API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>seleniumuser.seleniumuser</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import os
+import random
+import sys
+import time
+from pathlib import Path
+from types import LambdaType
+from typing import Any
+from warnings import warn
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.support.ui import Select
+
+from noiftimer import Timer
+from voxscribe import get_text_from_url
+from whosyouragent import get_agent
+
+
+class User:
+    &#34;&#34;&#34;Sits on top of selenium to streamline
+    automation and scraping tasks.&#34;&#34;&#34;
+
+    def __init__(
+        self,
+        headless: bool = False,
+        browser_type: str = &#34;firefox&#34;,
+        implicit_wait: int = 10,
+        page_load_timeout: int = 60,
+        open_browser: bool = True,
+        locator_method: str = &#34;xpath&#34;,
+        randomize_user_agent: bool = True,
+        user_agent_rotation_period: int = None,
+        move_window_by: tuple[int, int] = (0, -1000),
+        download_dir: str | Path = None,
+        driver_path: str | Path = None,
+    ):
+        &#34;&#34;&#34;
+        :param headless: If True, browser window will not be visible.
+
+        :param browser_type: Which browser to use. Can be &#39;firefox&#39; or &#39;chrome&#39;.
+
+        :param implicit_wait: Number of seconds to look for a specified element before
+        selenium considers it missing and throws an exception.
+
+        :param page_load_timeout: Time in seconds for selenium to wait for a page to load
+        before throwing an exception.
+
+        :param open_browser: If True, opens a browser window when a User object is created.
+        If False, a manual call to self.open_browser() must be made.
+
+        :param locator_method: The locator type User should expect to be given.
+        Can be &#39;xpath&#39;, &#39;id&#39;, &#39;className&#39;, &#39;name&#39;, or &#39;cssSelector&#39;.
+        Every member function with a &#39;locator&#39; argument refers to a string matching
+        the current locator_method.
+
+        :param randomize_user_agent: If True, a random useragent will be used whenever
+        the browser is opened. If False, the native useragent will be used.
+
+        :param user_agent_rotation_period: If not None, the browser window will be closed
+        and reopened with a new useragent every user_agent_rotation_period number of minutes.
+        Rotation occurs on the first call to self.get() after the time period has elapsed.
+        Ignored if randomize_user_agent is False.
+
+        :param move_window_by: The x and y amount of pixels to move the browser window by after opening.
+
+        :param download_dir: The download folder to use. If None, the default folder will be used.
+
+        :param driver_path: The path to the webdriver executable selenium should use.
+        If None, the system PATH will be checked for the executable.
+        If the executable isn&#39;t found, the parent directories and the immediate child directories
+        of the current working directory will be searched.
+        &#34;&#34;&#34;
+        self.headless = headless
+        browser_type = browser_type.lower()
+        if browser_type in [&#34;firefox&#34;, &#34;chrome&#34;]:
+            self.browser_type = browser_type
+        else:
+            raise ValueError(&#34;&#39;browser_type&#39; parameter must be &#39;firefox&#39; or &#39;chrome&#39;&#34;)
+        self.browser_open = False
+        self.implicit_wait = implicit_wait
+        self.page_load_timeout = page_load_timeout
+        self.rotation_timer = Timer()
+        self.timer = Timer()
+        self.timer.start()
+        self.randomize_user_agent = randomize_user_agent
+        self.user_agent_rotation_period = user_agent_rotation_period
+        self.locator_method = locator_method
+        self.turbo()
+        self.keys = Keys
+        self.move_window_by = move_window_by
+        self.download_dir = download_dir
+        self.driver_path = driver_path
+        if not self.driver_path:
+            self.search_for_driver()
+        if open_browser:
+            self.open_browser()
+        else:
+            self.browser = None
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        self.close_browser()
+
+    def configure_firefox(self) -&gt; FirefoxService:
+        &#34;&#34;&#34;Configure options and profile for firefox.&#34;&#34;&#34;
+        self.options = FirefoxOptions()
+        self.options.headless = self.headless
+        self.options.set_preference(
+            &#34;widget.windows.window_occlusion_tracking.enabled&#34;, False
+        )
+        self.options.set_preference(&#34;dom.webaudio.enabled&#34;, False)
+        if self.randomize_user_agent:
+            self.options.set_preference(&#34;general.useragent.override&#34;, get_agent())
+        if self.download_dir:
+            Path(self.download_dir).mkdir(parents=True, exist_ok=True)
+            self.profile = FirefoxProfile()
+            self.profile.set_preference(&#34;browser.download.dir&#34;, str(self.download_dir))
+            self.profile.set_preference(&#34;browser.download.folderList&#34;, 2)
+        else:
+            self.profile = None
+        self.service = FirefoxService(
+            executable_path=str(self.driver_path), log_path=os.devnull
+        )
+
+    def configure_chrome(self) -&gt; ChromeService:
+        &#34;&#34;&#34;Configure options and profile for chrome.&#34;&#34;&#34;
+        self.options = ChromeOptions()
+        self.options.headless = self.headless
+        self.options.add_argument(&#34;--disable-blink-features=AutomationControlled&#34;)
+        self.options.add_argument(&#34;--mute-audio&#34;)
+        self.options.add_argument(&#34;--disable-infobars&#34;)
+        self.options.add_argument(&#34;--disable-notifications&#34;)
+        self.options.add_argument(&#34;--log-level=3&#34;)
+        if self.randomize_user_agent:
+            self.options.add_argument(f&#34;--user-agent={get_agent()}&#34;)
+        self.options.add_experimental_option(&#34;useAutomationExtension&#34;, False)
+        if self.download_dir:
+            Path(self.download_dir).mkdir(parents=True, exist_ok=True)
+            self.options.add_experimental_option(
+                &#34;prefs&#34;, {&#34;download.default_directory&#34;: str(self.download_dir)}
+            )
+        self.service = ChromeService(
+            executable_path=str(self.driver_path), log_path=os.devnull
+        )
+
+    def search_for_driver(self):
+        &#34;&#34;&#34;Searches for the webdriver executable.&#34;&#34;&#34;
+        cwd = Path.cwd()
+        found = False
+        match self.browser_type:
+            case &#34;firefox&#34;:
+                driver = &#34;geckodriver.exe&#34;
+            case &#34;chrome&#34;:
+                driver = &#34;chromedriver.exe&#34;
+        # search PATH
+        env_path = os.environ[&#34;PATH&#34;]
+        if sys.platform == &#34;win32&#34;:
+            env_paths = env_path.split(&#34;;&#34;)
+        else:
+            env_paths = env_path.split(&#34;:&#34;)
+            driver = driver[: driver.find(&#34;.&#34;)]
+        for path in env_paths:
+            if (Path(path) / driver).exists():
+                self.driver_path = Path(path) / driver
+                found = True
+                break
+        # check current working directory and parent folders
+        if not found:
+            while cwd != cwd.parent:
+                if (cwd / driver).exists():
+                    self.driver_path = cwd / driver
+                    found = True
+                    break
+                cwd = cwd.parent
+            # check top most level
+            if not found and (cwd / driver).exists():
+                self.driver_path = cwd / driver
+                found = True
+        # check child folders (only 1 level down)
+        if not found:
+            for child in Path.cwd().iterdir():
+                if child.is_dir() and (child / driver).exists():
+                    self.driver_path = child / driver
+                    found = True
+        if not found:
+            warn(f&#34;Could not find {driver}&#34;)
+
+    def set_implicit_wait(self, wait_time: int = None):
+        &#34;&#34;&#34;Sets to default time if no arg given.&#34;&#34;&#34;
+        if not wait_time:
+            self.browser.implicitly_wait(self.implicit_wait)
+        else:
+            self.browser.implicitly_wait(wait_time)
+
+    def open_browser(self):
+        &#34;&#34;&#34;Configures and opens selenium browser.&#34;&#34;&#34;
+        if not self.browser_open:
+            match self.browser_type:
+                case &#34;firefox&#34;:
+                    self.configure_firefox()
+                    self.browser = webdriver.Firefox(
+                        options=self.options,
+                        service=self.service,
+                        firefox_profile=self.profile,
+                    )
+                case &#34;chrome&#34;:
+                    self.configure_chrome()
+                    self.browser = webdriver.Chrome(
+                        options=self.options, service=self.service
+                    )
+            self.set_implicit_wait()
+            self.browser.maximize_window()
+            self.browser.set_window_position(
+                self.move_window_by[0], self.move_window_by[1]
+            )
+            self.browser.maximize_window()
+            self.browser.set_page_load_timeout(self.page_load_timeout)
+            self.browser_open = True
+            self.tab_index = 0
+            self.rotation_timer.start()
+        else:
+            warn(&#34;Browser already open.&#34;)
+
+    def close_browser(self):
+        &#34;&#34;&#34;Close browser window.&#34;&#34;&#34;
+        self.browser_open = False
+        self.browser.quit()
+
+    def open_tab(self, url: str = &#34;&#34;, switch_to_tab: bool = True):
+        &#34;&#34;&#34;Opens new tab and, if provided, goes to url.
+
+        New tab is inserted after currently active tab.&#34;&#34;&#34;
+        self.script(&#34;window.open(arguments[0]);&#34;, url)
+        if switch_to_tab:
+            self.switch_to_tab(self.tab_index + 1)
+
+    def switch_to_tab(self, tab_index: int):
+        &#34;&#34;&#34;Switch to a tab in browser, zero indexed.&#34;&#34;&#34;
+        self.browser.switch_to.window(self.browser.window_handles[tab_index])
+        self.tab_index = tab_index
+
+    def get_num_tabs(self) -&gt; int:
+        &#34;&#34;&#34;Returns number of tabs open.&#34;&#34;&#34;
+        return len(self.browser.window_handles)
+
+    def close_tab(self, tab_index: int = 1):
+        &#34;&#34;&#34;Close specified tab and
+        switches to tab index 0.&#34;&#34;&#34;
+        self.switch_to_tab(tab_index)
+        self.browser.close()
+        self.switch_to_tab(0)
+
+    def get(self, url: str):
+        &#34;&#34;&#34;Requests webpage at given url and rotates userAgent if necessary.&#34;&#34;&#34;
+        if not self.browser_open:
+            self.open_browser()
+        if (
+            self.randomize_user_agent
+            and self.user_agent_rotation_period is not None
+            and self.rotation_timer.check(format=False)
+            &gt; (60 * self.user_agent_rotation_period)
+        ):
+            self.rotation_timer.stop()
+            self.close_browser()
+            self.open_browser()
+        self.browser.get(url)
+        self.script(&#34;Object.defineProperty(navigator, &#39;webdriver&#39;, {get: () =&gt; false})&#34;)
+        self.chill(self.arrival_wait)
+
+    def get_soup(self) -&gt; BeautifulSoup:
+        &#34;&#34;&#34;Returns a BeautifulSoup object
+        of the current page source.&#34;&#34;&#34;
+        return BeautifulSoup(self.browser.page_source, &#34;html.parser&#34;)
+
+    def current_url(self) -&gt; str:
+        &#34;&#34;&#34;Returns current url of active tab.&#34;&#34;&#34;
+        return self.browser.current_url
+
+    def delete_cookies(self):
+        &#34;&#34;&#34;Delete all cookies for
+        this browser instance.&#34;&#34;&#34;
+        self.browser.delete_all_cookies()
+
+    def turbo(self, engage: bool = True):
+        &#34;&#34;&#34;When engaged, strings will be sent
+        to elements all at once and there will be
+        no waiting after actions.
+
+        When disengaged, strings will be sent to elements
+        &#39;one key at a time&#39; with randomized amounts of
+        time between successive keys and after actions.&#34;&#34;&#34;
+        if engage:
+            self.after_key_wait = (0, 0)
+            self.after_field_wait = (0, 0)
+            self.after_click_wait = (0, 0)
+            self.arrival_wait = (1, 1)
+            self.one_key_at_a_time = False
+            self.turbo_engaged = True
+        else:
+            self.after_key_wait = (0.1, 0.5)
+            self.after_field_wait = (1, 2)
+            self.after_click_wait = (0.25, 1.5)
+            self.arrival_wait = (4, 10)
+            self.one_key_at_a_time = True
+            self.turbo_engaged = False
+
+    def chill(self, min_max: tuple[float, float]):
+        &#34;&#34;&#34;Sleeps a random amount
+        between min_max[0] and min_max[1].&#34;&#34;&#34;
+        time.sleep(random.uniform(min_max[0], min_max[1]))
+
+    def script(self, script: str, args: Any = None) -&gt; Any:
+        &#34;&#34;&#34;Execute javascript code and returns result.&#34;&#34;&#34;
+        return self.browser.execute_script(script, args)
+
+    def remove(self, locator: str):
+        &#34;&#34;&#34;Removes element from DOM.&#34;&#34;&#34;
+        self.script(&#34;arguments[0].remove();&#34;, self.find(locator))
+
+    def get_length(self, locator: str) -&gt; int:
+        &#34;&#34;&#34;Returns number of child elements for a given element.&#34;&#34;&#34;
+        return int(self.script(&#34;return arguments[0].length;&#34;, self.find(locator)))
+
+    def find(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Finds and returns a WebElement.&#34;&#34;&#34;
+        match self.locator_method:
+            case &#34;xpath&#34;:
+                return self.browser.find_element(By.XPATH, locator)
+            case &#34;id&#34;:
+                return self.browser.find_element(By.ID, locator)
+            case &#34;className&#34;:
+                return self.browser.find_element(By.CLASS_NAME, locator)
+            case &#34;name&#34;:
+                return self.browser.find_element(By.NAME, locator)
+            case &#34;cssSelector&#34;:
+                return self.browser.find_element(By.CSS_SELECTOR, locator)
+
+    def find_children(self, locator: str) -&gt; list[WebElement]:
+        &#34;&#34;&#34;Returns a list of child WebElements
+        for given locator arg.&#34;&#34;&#34;
+        element = self.find(locator)
+        return element.find_elements(&#34;xpath&#34;, &#34;./*&#34;)
+
+    def scroll(self, amount: int = None, fraction: float = None):
+        &#34;&#34;&#34;Scroll web page.
+        :param amount: The number of lines to scroll if not None.
+
+        :param fraction: The amount between 0.0 and 1.0
+        of the page height to scroll.
+
+        If values are provided for both arguments,
+        amount will be used.
+
+        If values are provided for neither argument,
+        the entire page length will be scrolled.
+
+        Scrolls one line at a time if self.turbo is False.&#34;&#34;&#34;
+        if amount:
+            amount_to_scroll = amount
+        elif fraction:
+            amount_to_scroll = int(
+                fraction
+                * (
+                    int(self.script(&#34;return document.body.scrollHeight;&#34;))
+                    - int(self.script(&#34;return window.pageYOffset;&#34;))
+                )
+            )
+        else:
+            amount_to_scroll = int(self.script(&#34;return document.body.scrollHeight;&#34;))
+        if self.turbo_engaged:
+            self.script(&#34;window.scrollBy(0,arguments[0]);&#34;, amount_to_scroll)
+        else:
+            for _ in range(abs(amount_to_scroll)):
+                if amount_to_scroll &gt;= 0:
+                    self.script(&#34;window.scrollBy(0,1);&#34;)
+                else:
+                    self.script(&#34;window.scrollBy(0,-1);&#34;)
+        self.chill(self.after_click_wait)
+
+    def scroll_into_view(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Scrolls to a given element and returns the element.&#34;&#34;&#34;
+        element = self.find(locator)
+        self.script(&#34;arguments[0].scroll_into_view();&#34;, element)
+        self.chill(self.after_click_wait)
+        return element
+
+    def text(self, locator: str) -&gt; str:
+        &#34;&#34;&#34;Returns text of WebElement.&#34;&#34;&#34;
+        return self.find(locator).text
+
+    def click(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Clicks on and returns WebElement.&#34;&#34;&#34;
+        element = self.find(locator)
+        element.click()
+        self.chill(self.after_click_wait)
+        return element
+
+    def clear(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Clears content of WebElement if able
+        and then returns WebElement.&#34;&#34;&#34;
+        element = self.find(locator)
+        element.clear()
+        self.chill(self.after_click_wait)
+        return element
+
+    def switch_to_iframe(self, locator: str):
+        &#34;&#34;&#34;Switch to an iframe from given locator.&#34;&#34;&#34;
+        self.browser.switch_to.frame(self.find(locator))
+
+    def switch_to_parent_frame(self):
+        &#34;&#34;&#34;Move up a frame level from current frame.&#34;&#34;&#34;
+        self.browser.switch_to.parent_frame()
+
+    def select(
+        self, locator: str, method: str, choice: str | int | tuple
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Select a choice from Select element.
+        Returns the Select element from the locator string,
+        not the option element that is selected.
+
+        :param method: Can be &#39;value&#39; or &#39;index&#39;
+
+        :param choice: The option to select.
+
+        If method is &#39;value&#39;, then choice should be
+        the html &#39;value&#39; attribute of the desired option.
+
+        If method is &#39;index&#39;, choice can either be a single
+        int for the desired option or it can be a two-tuple.
+        If the tuple is provided, a random option between the
+        two indicies (inclusive) will be selected.&#34;&#34;&#34;
+        element = self.click(locator)
+        match method:
+            case &#34;value&#34;:
+                Select(element).select_by_value(choice)
+            case &#34;index&#34;:
+                if type(choice) == tuple:
+                    choice = random.randint(choice[0], choice[1])
+                Select(element).select_by_index(choice)
+        self.chill(self.after_field_wait)
+        return element
+
+    def click_elements(
+        self, locators: list[str], max_selections: int = None, min_selections: int = 1
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Click a random number of WebElements
+        and return the last WebElement clicked.
+
+        :param locators: A list of element locators to choose from.
+
+        :param max_selections: The maximum number of elements to click.
+        If None, the maximum will be the length of the locators list.
+
+        :param min_selections: The minimum number of elements to click.
+
+        e.g. self.click_elements([xpath1, xpath2, xpath3, xpath4], max_selections=3)
+        will click between 1 and 3 random elements from the list.
+        &#34;&#34;&#34;
+        if not max_selections:
+            max_selections = len(locators)
+        for option in random.sample(
+            locators, k=random.randint(min_selections, max_selections)
+        ):
+            element = self.click(option)
+        return element
+
+    def get_click_list(
+        self, num_options: int, max_choices: int = 1, min_choices: int = 1
+    ) -&gt; list[str]:
+        &#34;&#34;&#34;Similar to self.click_elements(), but for use with the self.fill_next() method.
+
+        Creates a list of length &#39;num_options&#39; where every element is &#39;skip&#39;.
+
+        A random number of elements in the list between &#39;min_choices&#39; and &#39;max_choices&#39; are
+        replaced with &#39;keys.SPACE&#39; (interpreted as a click by almost all web forms).&#34;&#34;&#34;
+        click_list = [&#34;skip&#34;] * num_options
+        selected_indexes = []
+        for i in range(random.randint(min_choices, max_choices)):
+            index = random.randint(0, num_options - 1)
+            while index in selected_indexes:
+                index = random.randint(0, num_options - 1)
+            selected_indexes.append(index)
+            click_list[index] = self.keys.SPACE
+        return click_list
+
+    def send_keys(
+        self,
+        locator: str,
+        data: str,
+        click_first: bool = True,
+        clear_first: bool = False,
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Types data into element and returns the element.
+
+        :param data: The string to send to the element.
+
+        :param click_first: If True, the element is clicked on
+        before the data is sent.
+
+        :param clear_first: If True, the current text of the element
+        is cleared before the data is sent.&#34;&#34;&#34;
+        element = self.click(locator) if click_first else self.find(locator)
+        if clear_first:
+            element.clear()
+            self.chill(self.after_click_wait)
+        if self.one_key_at_a_time:
+            for ch in str(data):
+                element.send_keys(ch)
+                self.chill(self.after_key_wait)
+        else:
+            element.send_keys(str(data))
+        self.chill(self.after_field_wait)
+        return element
+
+    def fill_next(
+        self, data: list[str | tuple], start_element: WebElement = None
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Fills a form by tabbing from the current WebElement
+        to the next one and using the corresponding item in data.
+        Returns the last WebElement.
+
+        :param data: A list of form data. If an item is a string (except for &#39;skip&#39;)
+        it will be typed into the current WebElement.
+
+        An item in data can be a two-tuple of the form
+        (&#39;downArrow&#39;, numberOfPresses:int|tuple[int, int]).
+
+        If numberOfPresses is a single int, Keys.ARROW_DOWN will be sent
+        that many times to the WebElement.
+
+        If numberOfPresses is a tuple, Keys.ARROW_DOWN will be sent a random
+        number of times between numberOfPresses[0] and numberOfPresses[1] inclusive.
+        This is typically for use with Select elements.
+
+        An item in data can also be &#39;skip&#39;, which will perform no action on the current
+        WebElement and will continue to the next one.
+
+        :param start_element: The WebElement to start tabbing from.
+        The currently active element will be used if start_element is None.
+
+        Note: The function tabs to the next element before sending data,
+        so the start_element should the WebElement before the one
+        that should receive data[0].
+        &#34;&#34;&#34;
+        element = (
+            self.browser.switch_to.active_element
+            if not start_element
+            else start_element
+        )
+        for datum in data:
+            element.send_keys(Keys.TAB)
+            element = self.browser.switch_to.active_element
+            self.chill(self.after_key_wait)
+            if datum[0] == &#34;downArrow&#34;:
+                if type(datum[1]) == tuple:
+                    times = random.randint(datum[1][0], datum[1][1])
+                else:
+                    times = datum[1]
+                for _ in range(times):
+                    element.send_keys(Keys.ARROW_DOWN)
+                    self.chill(self.after_key_wait)
+            elif datum == &#34;skip&#34;:
+                self.chill(self.after_key_wait)
+            else:
+                if self.turbo_engaged:
+                    element.send_keys(str(datum))
+                else:
+                    for ch in str(datum):
+                        element.send_keys(ch)
+                        self.chill(self.after_key_wait)
+            self.chill(self.after_field_wait)
+        return element
+
+    def wait_until(
+        self, condition: LambdaType, max_wait: float = 10, polling_interval: float = 0.1
+    ):
+        &#34;&#34;&#34;Checks condition repeatedly until either it is true,
+        or the max_wait is exceeded.
+
+        Raises a TimeoutError if the condition doesn&#39;t success within max_wait.
+
+        Useful for determing whether a form has been successfully submitted.
+
+        :param condition: The condition function to check.
+
+        :param max_wait: Number of seconds to continue checking condition
+        before throwing a TimeoutError.
+
+        :param polling_interval: The number of seconds to sleep before
+        checking the condition function again after it fails.
+
+        e.g. self.wait_until(lambda: &#39;Successfully Submitted&#39; in self.text(&#39;//p[@id=&#34;form-output&#34;]))&#34;&#34;&#34;
+        start_time = time.time()
+        while True:
+            try:
+                if condition():
+                    time.sleep(1)
+                    break
+                elif (time.time() - start_time) &gt; max_wait:
+                    raise TimeoutError(f&#34;max_wait exceeded in wait_until({condition})&#34;)
+                else:
+                    time.sleep(polling_interval)
+            except:
+                if (time.time() - start_time) &gt; max_wait:
+                    raise TimeoutError(f&#34;max_wait exceeded in wait_until({condition})&#34;)
+                else:
+                    time.sleep(polling_interval)
+
+    def dismiss_alert(self):
+        &#34;&#34;&#34;Dismiss alert dialog.&#34;&#34;&#34;
+        self.browser.switch_to.alert.dismiss()
+
+    def solve_recaptcha_v3(
+        self,
+        outer_iframe_xpath: str = &#39;//iframe[@title=&#34;reCAPTCHA&#34;]&#39;,
+        inner_iframe_xpath: str = &#39;//iframe[@title=&#34;recaptcha challenge expires in two minutes&#34;]&#39;,
+    ):
+        &#34;&#34;&#34;Pass google recaptcha v3 by solving an audio puzzle.
+
+        :param outer_iframe_xpath: Xpath to the iframe containing the recaptcha checkbox.
+        If it&#39;s the recaptcha without the initial checkbox that just shows the image puzzle,
+        pass None to this argument.
+
+        &#34;&#34;&#34;
+        locator_method = self.locator_method
+        self.locator_method = &#34;xpath&#34;
+        try:
+            if outer_iframe_xpath:
+                self.switch_to_iframe(outer_iframe_xpath)
+                self.click(&#39;//*[@id=&#34;recaptcha-anchor&#34;]&#39;)
+                self.switch_to_parent_frame()
+            self.switch_to_iframe(inner_iframe_xpath)
+            self.click(&#39;//*[@id=&#34;recaptcha-audio-button&#34;]&#39;)
+            mp3_url = self.find(
+                &#39;//a[@class=&#34;rc-audiochallenge-tdownload-link&#34;]&#39;
+            ).get_attribute(&#34;href&#34;)
+            text = get_text_from_url(mp3_url, &#34;.mp3&#34;)
+            self.send_keys(&#39;//*[@id=&#34;audio-response&#34;]&#39;, text)
+            self.click(&#39;//*[@id=&#34;recaptcha-verify-button&#34;]&#39;)
+        except Exception as e:
+            print(e)
+            raise Exception(&#34;Could not solve captcha&#34;)
+        finally:
+            self.switch_to_parent_frame()
+            self.locator_method = locator_method</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="seleniumuser.seleniumuser.User"><code class="flex name class">
+<span>class <span class="ident">User</span></span>
+<span>(</span><span>headless: bool = False, browser_type: str = 'firefox', implicit_wait: int = 10, page_load_timeout: int = 60, open_browser: bool = True, locator_method: str = 'xpath', randomize_user_agent: bool = True, user_agent_rotation_period: int = None, move_window_by: tuple[int, int] = (0, -1000), download_dir: str | pathlib.Path = None, driver_path: str | pathlib.Path = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sits on top of selenium to streamline
+automation and scraping tasks.</p>
+<p>:param headless: If True, browser window will not be visible.</p>
+<p>:param browser_type: Which browser to use. Can be 'firefox' or 'chrome'.</p>
+<p>:param implicit_wait: Number of seconds to look for a specified element before
+selenium considers it missing and throws an exception.</p>
+<p>:param page_load_timeout: Time in seconds for selenium to wait for a page to load
+before throwing an exception.</p>
+<p>:param open_browser: If True, opens a browser window when a User object is created.
+If False, a manual call to self.open_browser() must be made.</p>
+<p>:param locator_method: The locator type User should expect to be given.
+Can be 'xpath', 'id', 'className', 'name', or 'cssSelector'.
+Every member function with a 'locator' argument refers to a string matching
+the current locator_method.</p>
+<p>:param randomize_user_agent: If True, a random useragent will be used whenever
+the browser is opened. If False, the native useragent will be used.</p>
+<p>:param user_agent_rotation_period: If not None, the browser window will be closed
+and reopened with a new useragent every user_agent_rotation_period number of minutes.
+Rotation occurs on the first call to self.get() after the time period has elapsed.
+Ignored if randomize_user_agent is False.</p>
+<p>:param move_window_by: The x and y amount of pixels to move the browser window by after opening.</p>
+<p>:param download_dir: The download folder to use. If None, the default folder will be used.</p>
+<p>:param driver_path: The path to the webdriver executable selenium should use.
+If None, the system PATH will be checked for the executable.
+If the executable isn't found, the parent directories and the immediate child directories
+of the current working directory will be searched.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class User:
+    &#34;&#34;&#34;Sits on top of selenium to streamline
+    automation and scraping tasks.&#34;&#34;&#34;
+
+    def __init__(
+        self,
+        headless: bool = False,
+        browser_type: str = &#34;firefox&#34;,
+        implicit_wait: int = 10,
+        page_load_timeout: int = 60,
+        open_browser: bool = True,
+        locator_method: str = &#34;xpath&#34;,
+        randomize_user_agent: bool = True,
+        user_agent_rotation_period: int = None,
+        move_window_by: tuple[int, int] = (0, -1000),
+        download_dir: str | Path = None,
+        driver_path: str | Path = None,
+    ):
+        &#34;&#34;&#34;
+        :param headless: If True, browser window will not be visible.
+
+        :param browser_type: Which browser to use. Can be &#39;firefox&#39; or &#39;chrome&#39;.
+
+        :param implicit_wait: Number of seconds to look for a specified element before
+        selenium considers it missing and throws an exception.
+
+        :param page_load_timeout: Time in seconds for selenium to wait for a page to load
+        before throwing an exception.
+
+        :param open_browser: If True, opens a browser window when a User object is created.
+        If False, a manual call to self.open_browser() must be made.
+
+        :param locator_method: The locator type User should expect to be given.
+        Can be &#39;xpath&#39;, &#39;id&#39;, &#39;className&#39;, &#39;name&#39;, or &#39;cssSelector&#39;.
+        Every member function with a &#39;locator&#39; argument refers to a string matching
+        the current locator_method.
+
+        :param randomize_user_agent: If True, a random useragent will be used whenever
+        the browser is opened. If False, the native useragent will be used.
+
+        :param user_agent_rotation_period: If not None, the browser window will be closed
+        and reopened with a new useragent every user_agent_rotation_period number of minutes.
+        Rotation occurs on the first call to self.get() after the time period has elapsed.
+        Ignored if randomize_user_agent is False.
+
+        :param move_window_by: The x and y amount of pixels to move the browser window by after opening.
+
+        :param download_dir: The download folder to use. If None, the default folder will be used.
+
+        :param driver_path: The path to the webdriver executable selenium should use.
+        If None, the system PATH will be checked for the executable.
+        If the executable isn&#39;t found, the parent directories and the immediate child directories
+        of the current working directory will be searched.
+        &#34;&#34;&#34;
+        self.headless = headless
+        browser_type = browser_type.lower()
+        if browser_type in [&#34;firefox&#34;, &#34;chrome&#34;]:
+            self.browser_type = browser_type
+        else:
+            raise ValueError(&#34;&#39;browser_type&#39; parameter must be &#39;firefox&#39; or &#39;chrome&#39;&#34;)
+        self.browser_open = False
+        self.implicit_wait = implicit_wait
+        self.page_load_timeout = page_load_timeout
+        self.rotation_timer = Timer()
+        self.timer = Timer()
+        self.timer.start()
+        self.randomize_user_agent = randomize_user_agent
+        self.user_agent_rotation_period = user_agent_rotation_period
+        self.locator_method = locator_method
+        self.turbo()
+        self.keys = Keys
+        self.move_window_by = move_window_by
+        self.download_dir = download_dir
+        self.driver_path = driver_path
+        if not self.driver_path:
+            self.search_for_driver()
+        if open_browser:
+            self.open_browser()
+        else:
+            self.browser = None
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        self.close_browser()
+
+    def configure_firefox(self) -&gt; FirefoxService:
+        &#34;&#34;&#34;Configure options and profile for firefox.&#34;&#34;&#34;
+        self.options = FirefoxOptions()
+        self.options.headless = self.headless
+        self.options.set_preference(
+            &#34;widget.windows.window_occlusion_tracking.enabled&#34;, False
+        )
+        self.options.set_preference(&#34;dom.webaudio.enabled&#34;, False)
+        if self.randomize_user_agent:
+            self.options.set_preference(&#34;general.useragent.override&#34;, get_agent())
+        if self.download_dir:
+            Path(self.download_dir).mkdir(parents=True, exist_ok=True)
+            self.profile = FirefoxProfile()
+            self.profile.set_preference(&#34;browser.download.dir&#34;, str(self.download_dir))
+            self.profile.set_preference(&#34;browser.download.folderList&#34;, 2)
+        else:
+            self.profile = None
+        self.service = FirefoxService(
+            executable_path=str(self.driver_path), log_path=os.devnull
+        )
+
+    def configure_chrome(self) -&gt; ChromeService:
+        &#34;&#34;&#34;Configure options and profile for chrome.&#34;&#34;&#34;
+        self.options = ChromeOptions()
+        self.options.headless = self.headless
+        self.options.add_argument(&#34;--disable-blink-features=AutomationControlled&#34;)
+        self.options.add_argument(&#34;--mute-audio&#34;)
+        self.options.add_argument(&#34;--disable-infobars&#34;)
+        self.options.add_argument(&#34;--disable-notifications&#34;)
+        self.options.add_argument(&#34;--log-level=3&#34;)
+        if self.randomize_user_agent:
+            self.options.add_argument(f&#34;--user-agent={get_agent()}&#34;)
+        self.options.add_experimental_option(&#34;useAutomationExtension&#34;, False)
+        if self.download_dir:
+            Path(self.download_dir).mkdir(parents=True, exist_ok=True)
+            self.options.add_experimental_option(
+                &#34;prefs&#34;, {&#34;download.default_directory&#34;: str(self.download_dir)}
+            )
+        self.service = ChromeService(
+            executable_path=str(self.driver_path), log_path=os.devnull
+        )
+
+    def search_for_driver(self):
+        &#34;&#34;&#34;Searches for the webdriver executable.&#34;&#34;&#34;
+        cwd = Path.cwd()
+        found = False
+        match self.browser_type:
+            case &#34;firefox&#34;:
+                driver = &#34;geckodriver.exe&#34;
+            case &#34;chrome&#34;:
+                driver = &#34;chromedriver.exe&#34;
+        # search PATH
+        env_path = os.environ[&#34;PATH&#34;]
+        if sys.platform == &#34;win32&#34;:
+            env_paths = env_path.split(&#34;;&#34;)
+        else:
+            env_paths = env_path.split(&#34;:&#34;)
+            driver = driver[: driver.find(&#34;.&#34;)]
+        for path in env_paths:
+            if (Path(path) / driver).exists():
+                self.driver_path = Path(path) / driver
+                found = True
+                break
+        # check current working directory and parent folders
+        if not found:
+            while cwd != cwd.parent:
+                if (cwd / driver).exists():
+                    self.driver_path = cwd / driver
+                    found = True
+                    break
+                cwd = cwd.parent
+            # check top most level
+            if not found and (cwd / driver).exists():
+                self.driver_path = cwd / driver
+                found = True
+        # check child folders (only 1 level down)
+        if not found:
+            for child in Path.cwd().iterdir():
+                if child.is_dir() and (child / driver).exists():
+                    self.driver_path = child / driver
+                    found = True
+        if not found:
+            warn(f&#34;Could not find {driver}&#34;)
+
+    def set_implicit_wait(self, wait_time: int = None):
+        &#34;&#34;&#34;Sets to default time if no arg given.&#34;&#34;&#34;
+        if not wait_time:
+            self.browser.implicitly_wait(self.implicit_wait)
+        else:
+            self.browser.implicitly_wait(wait_time)
+
+    def open_browser(self):
+        &#34;&#34;&#34;Configures and opens selenium browser.&#34;&#34;&#34;
+        if not self.browser_open:
+            match self.browser_type:
+                case &#34;firefox&#34;:
+                    self.configure_firefox()
+                    self.browser = webdriver.Firefox(
+                        options=self.options,
+                        service=self.service,
+                        firefox_profile=self.profile,
+                    )
+                case &#34;chrome&#34;:
+                    self.configure_chrome()
+                    self.browser = webdriver.Chrome(
+                        options=self.options, service=self.service
+                    )
+            self.set_implicit_wait()
+            self.browser.maximize_window()
+            self.browser.set_window_position(
+                self.move_window_by[0], self.move_window_by[1]
+            )
+            self.browser.maximize_window()
+            self.browser.set_page_load_timeout(self.page_load_timeout)
+            self.browser_open = True
+            self.tab_index = 0
+            self.rotation_timer.start()
+        else:
+            warn(&#34;Browser already open.&#34;)
+
+    def close_browser(self):
+        &#34;&#34;&#34;Close browser window.&#34;&#34;&#34;
+        self.browser_open = False
+        self.browser.quit()
+
+    def open_tab(self, url: str = &#34;&#34;, switch_to_tab: bool = True):
+        &#34;&#34;&#34;Opens new tab and, if provided, goes to url.
+
+        New tab is inserted after currently active tab.&#34;&#34;&#34;
+        self.script(&#34;window.open(arguments[0]);&#34;, url)
+        if switch_to_tab:
+            self.switch_to_tab(self.tab_index + 1)
+
+    def switch_to_tab(self, tab_index: int):
+        &#34;&#34;&#34;Switch to a tab in browser, zero indexed.&#34;&#34;&#34;
+        self.browser.switch_to.window(self.browser.window_handles[tab_index])
+        self.tab_index = tab_index
+
+    def get_num_tabs(self) -&gt; int:
+        &#34;&#34;&#34;Returns number of tabs open.&#34;&#34;&#34;
+        return len(self.browser.window_handles)
+
+    def close_tab(self, tab_index: int = 1):
+        &#34;&#34;&#34;Close specified tab and
+        switches to tab index 0.&#34;&#34;&#34;
+        self.switch_to_tab(tab_index)
+        self.browser.close()
+        self.switch_to_tab(0)
+
+    def get(self, url: str):
+        &#34;&#34;&#34;Requests webpage at given url and rotates userAgent if necessary.&#34;&#34;&#34;
+        if not self.browser_open:
+            self.open_browser()
+        if (
+            self.randomize_user_agent
+            and self.user_agent_rotation_period is not None
+            and self.rotation_timer.check(format=False)
+            &gt; (60 * self.user_agent_rotation_period)
+        ):
+            self.rotation_timer.stop()
+            self.close_browser()
+            self.open_browser()
+        self.browser.get(url)
+        self.script(&#34;Object.defineProperty(navigator, &#39;webdriver&#39;, {get: () =&gt; false})&#34;)
+        self.chill(self.arrival_wait)
+
+    def get_soup(self) -&gt; BeautifulSoup:
+        &#34;&#34;&#34;Returns a BeautifulSoup object
+        of the current page source.&#34;&#34;&#34;
+        return BeautifulSoup(self.browser.page_source, &#34;html.parser&#34;)
+
+    def current_url(self) -&gt; str:
+        &#34;&#34;&#34;Returns current url of active tab.&#34;&#34;&#34;
+        return self.browser.current_url
+
+    def delete_cookies(self):
+        &#34;&#34;&#34;Delete all cookies for
+        this browser instance.&#34;&#34;&#34;
+        self.browser.delete_all_cookies()
+
+    def turbo(self, engage: bool = True):
+        &#34;&#34;&#34;When engaged, strings will be sent
+        to elements all at once and there will be
+        no waiting after actions.
+
+        When disengaged, strings will be sent to elements
+        &#39;one key at a time&#39; with randomized amounts of
+        time between successive keys and after actions.&#34;&#34;&#34;
+        if engage:
+            self.after_key_wait = (0, 0)
+            self.after_field_wait = (0, 0)
+            self.after_click_wait = (0, 0)
+            self.arrival_wait = (1, 1)
+            self.one_key_at_a_time = False
+            self.turbo_engaged = True
+        else:
+            self.after_key_wait = (0.1, 0.5)
+            self.after_field_wait = (1, 2)
+            self.after_click_wait = (0.25, 1.5)
+            self.arrival_wait = (4, 10)
+            self.one_key_at_a_time = True
+            self.turbo_engaged = False
+
+    def chill(self, min_max: tuple[float, float]):
+        &#34;&#34;&#34;Sleeps a random amount
+        between min_max[0] and min_max[1].&#34;&#34;&#34;
+        time.sleep(random.uniform(min_max[0], min_max[1]))
+
+    def script(self, script: str, args: Any = None) -&gt; Any:
+        &#34;&#34;&#34;Execute javascript code and returns result.&#34;&#34;&#34;
+        return self.browser.execute_script(script, args)
+
+    def remove(self, locator: str):
+        &#34;&#34;&#34;Removes element from DOM.&#34;&#34;&#34;
+        self.script(&#34;arguments[0].remove();&#34;, self.find(locator))
+
+    def get_length(self, locator: str) -&gt; int:
+        &#34;&#34;&#34;Returns number of child elements for a given element.&#34;&#34;&#34;
+        return int(self.script(&#34;return arguments[0].length;&#34;, self.find(locator)))
+
+    def find(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Finds and returns a WebElement.&#34;&#34;&#34;
+        match self.locator_method:
+            case &#34;xpath&#34;:
+                return self.browser.find_element(By.XPATH, locator)
+            case &#34;id&#34;:
+                return self.browser.find_element(By.ID, locator)
+            case &#34;className&#34;:
+                return self.browser.find_element(By.CLASS_NAME, locator)
+            case &#34;name&#34;:
+                return self.browser.find_element(By.NAME, locator)
+            case &#34;cssSelector&#34;:
+                return self.browser.find_element(By.CSS_SELECTOR, locator)
+
+    def find_children(self, locator: str) -&gt; list[WebElement]:
+        &#34;&#34;&#34;Returns a list of child WebElements
+        for given locator arg.&#34;&#34;&#34;
+        element = self.find(locator)
+        return element.find_elements(&#34;xpath&#34;, &#34;./*&#34;)
+
+    def scroll(self, amount: int = None, fraction: float = None):
+        &#34;&#34;&#34;Scroll web page.
+        :param amount: The number of lines to scroll if not None.
+
+        :param fraction: The amount between 0.0 and 1.0
+        of the page height to scroll.
+
+        If values are provided for both arguments,
+        amount will be used.
+
+        If values are provided for neither argument,
+        the entire page length will be scrolled.
+
+        Scrolls one line at a time if self.turbo is False.&#34;&#34;&#34;
+        if amount:
+            amount_to_scroll = amount
+        elif fraction:
+            amount_to_scroll = int(
+                fraction
+                * (
+                    int(self.script(&#34;return document.body.scrollHeight;&#34;))
+                    - int(self.script(&#34;return window.pageYOffset;&#34;))
+                )
+            )
+        else:
+            amount_to_scroll = int(self.script(&#34;return document.body.scrollHeight;&#34;))
+        if self.turbo_engaged:
+            self.script(&#34;window.scrollBy(0,arguments[0]);&#34;, amount_to_scroll)
+        else:
+            for _ in range(abs(amount_to_scroll)):
+                if amount_to_scroll &gt;= 0:
+                    self.script(&#34;window.scrollBy(0,1);&#34;)
+                else:
+                    self.script(&#34;window.scrollBy(0,-1);&#34;)
+        self.chill(self.after_click_wait)
+
+    def scroll_into_view(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Scrolls to a given element and returns the element.&#34;&#34;&#34;
+        element = self.find(locator)
+        self.script(&#34;arguments[0].scroll_into_view();&#34;, element)
+        self.chill(self.after_click_wait)
+        return element
+
+    def text(self, locator: str) -&gt; str:
+        &#34;&#34;&#34;Returns text of WebElement.&#34;&#34;&#34;
+        return self.find(locator).text
+
+    def click(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Clicks on and returns WebElement.&#34;&#34;&#34;
+        element = self.find(locator)
+        element.click()
+        self.chill(self.after_click_wait)
+        return element
+
+    def clear(self, locator: str) -&gt; WebElement:
+        &#34;&#34;&#34;Clears content of WebElement if able
+        and then returns WebElement.&#34;&#34;&#34;
+        element = self.find(locator)
+        element.clear()
+        self.chill(self.after_click_wait)
+        return element
+
+    def switch_to_iframe(self, locator: str):
+        &#34;&#34;&#34;Switch to an iframe from given locator.&#34;&#34;&#34;
+        self.browser.switch_to.frame(self.find(locator))
+
+    def switch_to_parent_frame(self):
+        &#34;&#34;&#34;Move up a frame level from current frame.&#34;&#34;&#34;
+        self.browser.switch_to.parent_frame()
+
+    def select(
+        self, locator: str, method: str, choice: str | int | tuple
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Select a choice from Select element.
+        Returns the Select element from the locator string,
+        not the option element that is selected.
+
+        :param method: Can be &#39;value&#39; or &#39;index&#39;
+
+        :param choice: The option to select.
+
+        If method is &#39;value&#39;, then choice should be
+        the html &#39;value&#39; attribute of the desired option.
+
+        If method is &#39;index&#39;, choice can either be a single
+        int for the desired option or it can be a two-tuple.
+        If the tuple is provided, a random option between the
+        two indicies (inclusive) will be selected.&#34;&#34;&#34;
+        element = self.click(locator)
+        match method:
+            case &#34;value&#34;:
+                Select(element).select_by_value(choice)
+            case &#34;index&#34;:
+                if type(choice) == tuple:
+                    choice = random.randint(choice[0], choice[1])
+                Select(element).select_by_index(choice)
+        self.chill(self.after_field_wait)
+        return element
+
+    def click_elements(
+        self, locators: list[str], max_selections: int = None, min_selections: int = 1
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Click a random number of WebElements
+        and return the last WebElement clicked.
+
+        :param locators: A list of element locators to choose from.
+
+        :param max_selections: The maximum number of elements to click.
+        If None, the maximum will be the length of the locators list.
+
+        :param min_selections: The minimum number of elements to click.
+
+        e.g. self.click_elements([xpath1, xpath2, xpath3, xpath4], max_selections=3)
+        will click between 1 and 3 random elements from the list.
+        &#34;&#34;&#34;
+        if not max_selections:
+            max_selections = len(locators)
+        for option in random.sample(
+            locators, k=random.randint(min_selections, max_selections)
+        ):
+            element = self.click(option)
+        return element
+
+    def get_click_list(
+        self, num_options: int, max_choices: int = 1, min_choices: int = 1
+    ) -&gt; list[str]:
+        &#34;&#34;&#34;Similar to self.click_elements(), but for use with the self.fill_next() method.
+
+        Creates a list of length &#39;num_options&#39; where every element is &#39;skip&#39;.
+
+        A random number of elements in the list between &#39;min_choices&#39; and &#39;max_choices&#39; are
+        replaced with &#39;keys.SPACE&#39; (interpreted as a click by almost all web forms).&#34;&#34;&#34;
+        click_list = [&#34;skip&#34;] * num_options
+        selected_indexes = []
+        for i in range(random.randint(min_choices, max_choices)):
+            index = random.randint(0, num_options - 1)
+            while index in selected_indexes:
+                index = random.randint(0, num_options - 1)
+            selected_indexes.append(index)
+            click_list[index] = self.keys.SPACE
+        return click_list
+
+    def send_keys(
+        self,
+        locator: str,
+        data: str,
+        click_first: bool = True,
+        clear_first: bool = False,
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Types data into element and returns the element.
+
+        :param data: The string to send to the element.
+
+        :param click_first: If True, the element is clicked on
+        before the data is sent.
+
+        :param clear_first: If True, the current text of the element
+        is cleared before the data is sent.&#34;&#34;&#34;
+        element = self.click(locator) if click_first else self.find(locator)
+        if clear_first:
+            element.clear()
+            self.chill(self.after_click_wait)
+        if self.one_key_at_a_time:
+            for ch in str(data):
+                element.send_keys(ch)
+                self.chill(self.after_key_wait)
+        else:
+            element.send_keys(str(data))
+        self.chill(self.after_field_wait)
+        return element
+
+    def fill_next(
+        self, data: list[str | tuple], start_element: WebElement = None
+    ) -&gt; WebElement:
+        &#34;&#34;&#34;Fills a form by tabbing from the current WebElement
+        to the next one and using the corresponding item in data.
+        Returns the last WebElement.
+
+        :param data: A list of form data. If an item is a string (except for &#39;skip&#39;)
+        it will be typed into the current WebElement.
+
+        An item in data can be a two-tuple of the form
+        (&#39;downArrow&#39;, numberOfPresses:int|tuple[int, int]).
+
+        If numberOfPresses is a single int, Keys.ARROW_DOWN will be sent
+        that many times to the WebElement.
+
+        If numberOfPresses is a tuple, Keys.ARROW_DOWN will be sent a random
+        number of times between numberOfPresses[0] and numberOfPresses[1] inclusive.
+        This is typically for use with Select elements.
+
+        An item in data can also be &#39;skip&#39;, which will perform no action on the current
+        WebElement and will continue to the next one.
+
+        :param start_element: The WebElement to start tabbing from.
+        The currently active element will be used if start_element is None.
+
+        Note: The function tabs to the next element before sending data,
+        so the start_element should the WebElement before the one
+        that should receive data[0].
+        &#34;&#34;&#34;
+        element = (
+            self.browser.switch_to.active_element
+            if not start_element
+            else start_element
+        )
+        for datum in data:
+            element.send_keys(Keys.TAB)
+            element = self.browser.switch_to.active_element
+            self.chill(self.after_key_wait)
+            if datum[0] == &#34;downArrow&#34;:
+                if type(datum[1]) == tuple:
+                    times = random.randint(datum[1][0], datum[1][1])
+                else:
+                    times = datum[1]
+                for _ in range(times):
+                    element.send_keys(Keys.ARROW_DOWN)
+                    self.chill(self.after_key_wait)
+            elif datum == &#34;skip&#34;:
+                self.chill(self.after_key_wait)
+            else:
+                if self.turbo_engaged:
+                    element.send_keys(str(datum))
+                else:
+                    for ch in str(datum):
+                        element.send_keys(ch)
+                        self.chill(self.after_key_wait)
+            self.chill(self.after_field_wait)
+        return element
+
+    def wait_until(
+        self, condition: LambdaType, max_wait: float = 10, polling_interval: float = 0.1
+    ):
+        &#34;&#34;&#34;Checks condition repeatedly until either it is true,
+        or the max_wait is exceeded.
+
+        Raises a TimeoutError if the condition doesn&#39;t success within max_wait.
+
+        Useful for determing whether a form has been successfully submitted.
+
+        :param condition: The condition function to check.
+
+        :param max_wait: Number of seconds to continue checking condition
+        before throwing a TimeoutError.
+
+        :param polling_interval: The number of seconds to sleep before
+        checking the condition function again after it fails.
+
+        e.g. self.wait_until(lambda: &#39;Successfully Submitted&#39; in self.text(&#39;//p[@id=&#34;form-output&#34;]))&#34;&#34;&#34;
+        start_time = time.time()
+        while True:
+            try:
+                if condition():
+                    time.sleep(1)
+                    break
+                elif (time.time() - start_time) &gt; max_wait:
+                    raise TimeoutError(f&#34;max_wait exceeded in wait_until({condition})&#34;)
+                else:
+                    time.sleep(polling_interval)
+            except:
+                if (time.time() - start_time) &gt; max_wait:
+                    raise TimeoutError(f&#34;max_wait exceeded in wait_until({condition})&#34;)
+                else:
+                    time.sleep(polling_interval)
+
+    def dismiss_alert(self):
+        &#34;&#34;&#34;Dismiss alert dialog.&#34;&#34;&#34;
+        self.browser.switch_to.alert.dismiss()
+
+    def solve_recaptcha_v3(
+        self,
+        outer_iframe_xpath: str = &#39;//iframe[@title=&#34;reCAPTCHA&#34;]&#39;,
+        inner_iframe_xpath: str = &#39;//iframe[@title=&#34;recaptcha challenge expires in two minutes&#34;]&#39;,
+    ):
+        &#34;&#34;&#34;Pass google recaptcha v3 by solving an audio puzzle.
+
+        :param outer_iframe_xpath: Xpath to the iframe containing the recaptcha checkbox.
+        If it&#39;s the recaptcha without the initial checkbox that just shows the image puzzle,
+        pass None to this argument.
+
+        &#34;&#34;&#34;
+        locator_method = self.locator_method
+        self.locator_method = &#34;xpath&#34;
+        try:
+            if outer_iframe_xpath:
+                self.switch_to_iframe(outer_iframe_xpath)
+                self.click(&#39;//*[@id=&#34;recaptcha-anchor&#34;]&#39;)
+                self.switch_to_parent_frame()
+            self.switch_to_iframe(inner_iframe_xpath)
+            self.click(&#39;//*[@id=&#34;recaptcha-audio-button&#34;]&#39;)
+            mp3_url = self.find(
+                &#39;//a[@class=&#34;rc-audiochallenge-tdownload-link&#34;]&#39;
+            ).get_attribute(&#34;href&#34;)
+            text = get_text_from_url(mp3_url, &#34;.mp3&#34;)
+            self.send_keys(&#39;//*[@id=&#34;audio-response&#34;]&#39;, text)
+            self.click(&#39;//*[@id=&#34;recaptcha-verify-button&#34;]&#39;)
+        except Exception as e:
+            print(e)
+            raise Exception(&#34;Could not solve captcha&#34;)
+        finally:
+            self.switch_to_parent_frame()
+            self.locator_method = locator_method</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="seleniumuser.seleniumuser.User.chill"><code class="name flex">
+<span>def <span class="ident">chill</span></span>(<span>self, min_max: tuple[float, float])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sleeps a random amount
+between min_max[0] and min_max[1].</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def chill(self, min_max: tuple[float, float]):
+    &#34;&#34;&#34;Sleeps a random amount
+    between min_max[0] and min_max[1].&#34;&#34;&#34;
+    time.sleep(random.uniform(min_max[0], min_max[1]))</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, locator: str) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Clears content of WebElement if able
+and then returns WebElement.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def clear(self, locator: str) -&gt; WebElement:
+    &#34;&#34;&#34;Clears content of WebElement if able
+    and then returns WebElement.&#34;&#34;&#34;
+    element = self.find(locator)
+    element.clear()
+    self.chill(self.after_click_wait)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.click"><code class="name flex">
+<span>def <span class="ident">click</span></span>(<span>self, locator: str) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Clicks on and returns WebElement.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def click(self, locator: str) -&gt; WebElement:
+    &#34;&#34;&#34;Clicks on and returns WebElement.&#34;&#34;&#34;
+    element = self.find(locator)
+    element.click()
+    self.chill(self.after_click_wait)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.click_elements"><code class="name flex">
+<span>def <span class="ident">click_elements</span></span>(<span>self, locators: list[str], max_selections: int = None, min_selections: int = 1) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Click a random number of WebElements
+and return the last WebElement clicked.</p>
+<p>:param locators: A list of element locators to choose from.</p>
+<p>:param max_selections: The maximum number of elements to click.
+If None, the maximum will be the length of the locators list.</p>
+<p>:param min_selections: The minimum number of elements to click.</p>
+<p>e.g. self.click_elements([xpath1, xpath2, xpath3, xpath4], max_selections=3)
+will click between 1 and 3 random elements from the list.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def click_elements(
+    self, locators: list[str], max_selections: int = None, min_selections: int = 1
+) -&gt; WebElement:
+    &#34;&#34;&#34;Click a random number of WebElements
+    and return the last WebElement clicked.
+
+    :param locators: A list of element locators to choose from.
+
+    :param max_selections: The maximum number of elements to click.
+    If None, the maximum will be the length of the locators list.
+
+    :param min_selections: The minimum number of elements to click.
+
+    e.g. self.click_elements([xpath1, xpath2, xpath3, xpath4], max_selections=3)
+    will click between 1 and 3 random elements from the list.
+    &#34;&#34;&#34;
+    if not max_selections:
+        max_selections = len(locators)
+    for option in random.sample(
+        locators, k=random.randint(min_selections, max_selections)
+    ):
+        element = self.click(option)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.close_browser"><code class="name flex">
+<span>def <span class="ident">close_browser</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Close browser window.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close_browser(self):
+    &#34;&#34;&#34;Close browser window.&#34;&#34;&#34;
+    self.browser_open = False
+    self.browser.quit()</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.close_tab"><code class="name flex">
+<span>def <span class="ident">close_tab</span></span>(<span>self, tab_index: int = 1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Close specified tab and
+switches to tab index 0.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close_tab(self, tab_index: int = 1):
+    &#34;&#34;&#34;Close specified tab and
+    switches to tab index 0.&#34;&#34;&#34;
+    self.switch_to_tab(tab_index)
+    self.browser.close()
+    self.switch_to_tab(0)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.configure_chrome"><code class="name flex">
+<span>def <span class="ident">configure_chrome</span></span>(<span>self) ‑> selenium.webdriver.chrome.service.Service</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Configure options and profile for chrome.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def configure_chrome(self) -&gt; ChromeService:
+    &#34;&#34;&#34;Configure options and profile for chrome.&#34;&#34;&#34;
+    self.options = ChromeOptions()
+    self.options.headless = self.headless
+    self.options.add_argument(&#34;--disable-blink-features=AutomationControlled&#34;)
+    self.options.add_argument(&#34;--mute-audio&#34;)
+    self.options.add_argument(&#34;--disable-infobars&#34;)
+    self.options.add_argument(&#34;--disable-notifications&#34;)
+    self.options.add_argument(&#34;--log-level=3&#34;)
+    if self.randomize_user_agent:
+        self.options.add_argument(f&#34;--user-agent={get_agent()}&#34;)
+    self.options.add_experimental_option(&#34;useAutomationExtension&#34;, False)
+    if self.download_dir:
+        Path(self.download_dir).mkdir(parents=True, exist_ok=True)
+        self.options.add_experimental_option(
+            &#34;prefs&#34;, {&#34;download.default_directory&#34;: str(self.download_dir)}
+        )
+    self.service = ChromeService(
+        executable_path=str(self.driver_path), log_path=os.devnull
+    )</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.configure_firefox"><code class="name flex">
+<span>def <span class="ident">configure_firefox</span></span>(<span>self) ‑> selenium.webdriver.firefox.service.Service</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Configure options and profile for firefox.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def configure_firefox(self) -&gt; FirefoxService:
+    &#34;&#34;&#34;Configure options and profile for firefox.&#34;&#34;&#34;
+    self.options = FirefoxOptions()
+    self.options.headless = self.headless
+    self.options.set_preference(
+        &#34;widget.windows.window_occlusion_tracking.enabled&#34;, False
+    )
+    self.options.set_preference(&#34;dom.webaudio.enabled&#34;, False)
+    if self.randomize_user_agent:
+        self.options.set_preference(&#34;general.useragent.override&#34;, get_agent())
+    if self.download_dir:
+        Path(self.download_dir).mkdir(parents=True, exist_ok=True)
+        self.profile = FirefoxProfile()
+        self.profile.set_preference(&#34;browser.download.dir&#34;, str(self.download_dir))
+        self.profile.set_preference(&#34;browser.download.folderList&#34;, 2)
+    else:
+        self.profile = None
+    self.service = FirefoxService(
+        executable_path=str(self.driver_path), log_path=os.devnull
+    )</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.current_url"><code class="name flex">
+<span>def <span class="ident">current_url</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns current url of active tab.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def current_url(self) -&gt; str:
+    &#34;&#34;&#34;Returns current url of active tab.&#34;&#34;&#34;
+    return self.browser.current_url</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.delete_cookies"><code class="name flex">
+<span>def <span class="ident">delete_cookies</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Delete all cookies for
+this browser instance.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def delete_cookies(self):
+    &#34;&#34;&#34;Delete all cookies for
+    this browser instance.&#34;&#34;&#34;
+    self.browser.delete_all_cookies()</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.dismiss_alert"><code class="name flex">
+<span>def <span class="ident">dismiss_alert</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Dismiss alert dialog.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dismiss_alert(self):
+    &#34;&#34;&#34;Dismiss alert dialog.&#34;&#34;&#34;
+    self.browser.switch_to.alert.dismiss()</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.fill_next"><code class="name flex">
+<span>def <span class="ident">fill_next</span></span>(<span>self, data: list[str | tuple], start_element: selenium.webdriver.remote.webelement.WebElement = None) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills a form by tabbing from the current WebElement
+to the next one and using the corresponding item in data.
+Returns the last WebElement.</p>
+<p>:param data: A list of form data. If an item is a string (except for 'skip')
+it will be typed into the current WebElement.</p>
+<p>An item in data can be a two-tuple of the form
+('downArrow', numberOfPresses:int|tuple[int, int]).</p>
+<p>If numberOfPresses is a single int, Keys.ARROW_DOWN will be sent
+that many times to the WebElement.</p>
+<p>If numberOfPresses is a tuple, Keys.ARROW_DOWN will be sent a random
+number of times between numberOfPresses[0] and numberOfPresses[1] inclusive.
+This is typically for use with Select elements.</p>
+<p>An item in data can also be 'skip', which will perform no action on the current
+WebElement and will continue to the next one.</p>
+<p>:param start_element: The WebElement to start tabbing from.
+The currently active element will be used if start_element is None.</p>
+<p>Note: The function tabs to the next element before sending data,
+so the start_element should the WebElement before the one
+that should receive data[0].</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fill_next(
+    self, data: list[str | tuple], start_element: WebElement = None
+) -&gt; WebElement:
+    &#34;&#34;&#34;Fills a form by tabbing from the current WebElement
+    to the next one and using the corresponding item in data.
+    Returns the last WebElement.
+
+    :param data: A list of form data. If an item is a string (except for &#39;skip&#39;)
+    it will be typed into the current WebElement.
+
+    An item in data can be a two-tuple of the form
+    (&#39;downArrow&#39;, numberOfPresses:int|tuple[int, int]).
+
+    If numberOfPresses is a single int, Keys.ARROW_DOWN will be sent
+    that many times to the WebElement.
+
+    If numberOfPresses is a tuple, Keys.ARROW_DOWN will be sent a random
+    number of times between numberOfPresses[0] and numberOfPresses[1] inclusive.
+    This is typically for use with Select elements.
+
+    An item in data can also be &#39;skip&#39;, which will perform no action on the current
+    WebElement and will continue to the next one.
+
+    :param start_element: The WebElement to start tabbing from.
+    The currently active element will be used if start_element is None.
+
+    Note: The function tabs to the next element before sending data,
+    so the start_element should the WebElement before the one
+    that should receive data[0].
+    &#34;&#34;&#34;
+    element = (
+        self.browser.switch_to.active_element
+        if not start_element
+        else start_element
+    )
+    for datum in data:
+        element.send_keys(Keys.TAB)
+        element = self.browser.switch_to.active_element
+        self.chill(self.after_key_wait)
+        if datum[0] == &#34;downArrow&#34;:
+            if type(datum[1]) == tuple:
+                times = random.randint(datum[1][0], datum[1][1])
+            else:
+                times = datum[1]
+            for _ in range(times):
+                element.send_keys(Keys.ARROW_DOWN)
+                self.chill(self.after_key_wait)
+        elif datum == &#34;skip&#34;:
+            self.chill(self.after_key_wait)
+        else:
+            if self.turbo_engaged:
+                element.send_keys(str(datum))
+            else:
+                for ch in str(datum):
+                    element.send_keys(ch)
+                    self.chill(self.after_key_wait)
+        self.chill(self.after_field_wait)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, locator: str) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds and returns a WebElement.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find(self, locator: str) -&gt; WebElement:
+    &#34;&#34;&#34;Finds and returns a WebElement.&#34;&#34;&#34;
+    match self.locator_method:
+        case &#34;xpath&#34;:
+            return self.browser.find_element(By.XPATH, locator)
+        case &#34;id&#34;:
+            return self.browser.find_element(By.ID, locator)
+        case &#34;className&#34;:
+            return self.browser.find_element(By.CLASS_NAME, locator)
+        case &#34;name&#34;:
+            return self.browser.find_element(By.NAME, locator)
+        case &#34;cssSelector&#34;:
+            return self.browser.find_element(By.CSS_SELECTOR, locator)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.find_children"><code class="name flex">
+<span>def <span class="ident">find_children</span></span>(<span>self, locator: str) ‑> list[selenium.webdriver.remote.webelement.WebElement]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a list of child WebElements
+for given locator arg.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_children(self, locator: str) -&gt; list[WebElement]:
+    &#34;&#34;&#34;Returns a list of child WebElements
+    for given locator arg.&#34;&#34;&#34;
+    element = self.find(locator)
+    return element.find_elements(&#34;xpath&#34;, &#34;./*&#34;)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self, url: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Requests webpage at given url and rotates userAgent if necessary.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get(self, url: str):
+    &#34;&#34;&#34;Requests webpage at given url and rotates userAgent if necessary.&#34;&#34;&#34;
+    if not self.browser_open:
+        self.open_browser()
+    if (
+        self.randomize_user_agent
+        and self.user_agent_rotation_period is not None
+        and self.rotation_timer.check(format=False)
+        &gt; (60 * self.user_agent_rotation_period)
+    ):
+        self.rotation_timer.stop()
+        self.close_browser()
+        self.open_browser()
+    self.browser.get(url)
+    self.script(&#34;Object.defineProperty(navigator, &#39;webdriver&#39;, {get: () =&gt; false})&#34;)
+    self.chill(self.arrival_wait)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.get_click_list"><code class="name flex">
+<span>def <span class="ident">get_click_list</span></span>(<span>self, num_options: int, max_choices: int = 1, min_choices: int = 1) ‑> list[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Similar to self.click_elements(), but for use with the self.fill_next() method.</p>
+<p>Creates a list of length 'num_options' where every element is 'skip'.</p>
+<p>A random number of elements in the list between 'min_choices' and 'max_choices' are
+replaced with 'keys.SPACE' (interpreted as a click by almost all web forms).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_click_list(
+    self, num_options: int, max_choices: int = 1, min_choices: int = 1
+) -&gt; list[str]:
+    &#34;&#34;&#34;Similar to self.click_elements(), but for use with the self.fill_next() method.
+
+    Creates a list of length &#39;num_options&#39; where every element is &#39;skip&#39;.
+
+    A random number of elements in the list between &#39;min_choices&#39; and &#39;max_choices&#39; are
+    replaced with &#39;keys.SPACE&#39; (interpreted as a click by almost all web forms).&#34;&#34;&#34;
+    click_list = [&#34;skip&#34;] * num_options
+    selected_indexes = []
+    for i in range(random.randint(min_choices, max_choices)):
+        index = random.randint(0, num_options - 1)
+        while index in selected_indexes:
+            index = random.randint(0, num_options - 1)
+        selected_indexes.append(index)
+        click_list[index] = self.keys.SPACE
+    return click_list</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.get_length"><code class="name flex">
+<span>def <span class="ident">get_length</span></span>(<span>self, locator: str) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns number of child elements for a given element.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_length(self, locator: str) -&gt; int:
+    &#34;&#34;&#34;Returns number of child elements for a given element.&#34;&#34;&#34;
+    return int(self.script(&#34;return arguments[0].length;&#34;, self.find(locator)))</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.get_num_tabs"><code class="name flex">
+<span>def <span class="ident">get_num_tabs</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns number of tabs open.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_num_tabs(self) -&gt; int:
+    &#34;&#34;&#34;Returns number of tabs open.&#34;&#34;&#34;
+    return len(self.browser.window_handles)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.get_soup"><code class="name flex">
+<span>def <span class="ident">get_soup</span></span>(<span>self) ‑> bs4.BeautifulSoup</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a BeautifulSoup object
+of the current page source.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_soup(self) -&gt; BeautifulSoup:
+    &#34;&#34;&#34;Returns a BeautifulSoup object
+    of the current page source.&#34;&#34;&#34;
+    return BeautifulSoup(self.browser.page_source, &#34;html.parser&#34;)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.open_browser"><code class="name flex">
+<span>def <span class="ident">open_browser</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Configures and opens selenium browser.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def open_browser(self):
+    &#34;&#34;&#34;Configures and opens selenium browser.&#34;&#34;&#34;
+    if not self.browser_open:
+        match self.browser_type:
+            case &#34;firefox&#34;:
+                self.configure_firefox()
+                self.browser = webdriver.Firefox(
+                    options=self.options,
+                    service=self.service,
+                    firefox_profile=self.profile,
+                )
+            case &#34;chrome&#34;:
+                self.configure_chrome()
+                self.browser = webdriver.Chrome(
+                    options=self.options, service=self.service
+                )
+        self.set_implicit_wait()
+        self.browser.maximize_window()
+        self.browser.set_window_position(
+            self.move_window_by[0], self.move_window_by[1]
+        )
+        self.browser.maximize_window()
+        self.browser.set_page_load_timeout(self.page_load_timeout)
+        self.browser_open = True
+        self.tab_index = 0
+        self.rotation_timer.start()
+    else:
+        warn(&#34;Browser already open.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.open_tab"><code class="name flex">
+<span>def <span class="ident">open_tab</span></span>(<span>self, url: str = '', switch_to_tab: bool = True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Opens new tab and, if provided, goes to url.</p>
+<p>New tab is inserted after currently active tab.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def open_tab(self, url: str = &#34;&#34;, switch_to_tab: bool = True):
+    &#34;&#34;&#34;Opens new tab and, if provided, goes to url.
+
+    New tab is inserted after currently active tab.&#34;&#34;&#34;
+    self.script(&#34;window.open(arguments[0]);&#34;, url)
+    if switch_to_tab:
+        self.switch_to_tab(self.tab_index + 1)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.remove"><code class="name flex">
+<span>def <span class="ident">remove</span></span>(<span>self, locator: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes element from DOM.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove(self, locator: str):
+    &#34;&#34;&#34;Removes element from DOM.&#34;&#34;&#34;
+    self.script(&#34;arguments[0].remove();&#34;, self.find(locator))</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.script"><code class="name flex">
+<span>def <span class="ident">script</span></span>(<span>self, script: str, args: Any = None) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Execute javascript code and returns result.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def script(self, script: str, args: Any = None) -&gt; Any:
+    &#34;&#34;&#34;Execute javascript code and returns result.&#34;&#34;&#34;
+    return self.browser.execute_script(script, args)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.scroll"><code class="name flex">
+<span>def <span class="ident">scroll</span></span>(<span>self, amount: int = None, fraction: float = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scroll web page.
+:param amount: The number of lines to scroll if not None.</p>
+<p>:param fraction: The amount between 0.0 and 1.0
+of the page height to scroll.</p>
+<p>If values are provided for both arguments,
+amount will be used.</p>
+<p>If values are provided for neither argument,
+the entire page length will be scrolled.</p>
+<p>Scrolls one line at a time if self.turbo is False.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def scroll(self, amount: int = None, fraction: float = None):
+    &#34;&#34;&#34;Scroll web page.
+    :param amount: The number of lines to scroll if not None.
+
+    :param fraction: The amount between 0.0 and 1.0
+    of the page height to scroll.
+
+    If values are provided for both arguments,
+    amount will be used.
+
+    If values are provided for neither argument,
+    the entire page length will be scrolled.
+
+    Scrolls one line at a time if self.turbo is False.&#34;&#34;&#34;
+    if amount:
+        amount_to_scroll = amount
+    elif fraction:
+        amount_to_scroll = int(
+            fraction
+            * (
+                int(self.script(&#34;return document.body.scrollHeight;&#34;))
+                - int(self.script(&#34;return window.pageYOffset;&#34;))
+            )
+        )
+    else:
+        amount_to_scroll = int(self.script(&#34;return document.body.scrollHeight;&#34;))
+    if self.turbo_engaged:
+        self.script(&#34;window.scrollBy(0,arguments[0]);&#34;, amount_to_scroll)
+    else:
+        for _ in range(abs(amount_to_scroll)):
+            if amount_to_scroll &gt;= 0:
+                self.script(&#34;window.scrollBy(0,1);&#34;)
+            else:
+                self.script(&#34;window.scrollBy(0,-1);&#34;)
+    self.chill(self.after_click_wait)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.scroll_into_view"><code class="name flex">
+<span>def <span class="ident">scroll_into_view</span></span>(<span>self, locator: str) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scrolls to a given element and returns the element.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def scroll_into_view(self, locator: str) -&gt; WebElement:
+    &#34;&#34;&#34;Scrolls to a given element and returns the element.&#34;&#34;&#34;
+    element = self.find(locator)
+    self.script(&#34;arguments[0].scroll_into_view();&#34;, element)
+    self.chill(self.after_click_wait)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.search_for_driver"><code class="name flex">
+<span>def <span class="ident">search_for_driver</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Searches for the webdriver executable.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def search_for_driver(self):
+    &#34;&#34;&#34;Searches for the webdriver executable.&#34;&#34;&#34;
+    cwd = Path.cwd()
+    found = False
+    match self.browser_type:
+        case &#34;firefox&#34;:
+            driver = &#34;geckodriver.exe&#34;
+        case &#34;chrome&#34;:
+            driver = &#34;chromedriver.exe&#34;
+    # search PATH
+    env_path = os.environ[&#34;PATH&#34;]
+    if sys.platform == &#34;win32&#34;:
+        env_paths = env_path.split(&#34;;&#34;)
+    else:
+        env_paths = env_path.split(&#34;:&#34;)
+        driver = driver[: driver.find(&#34;.&#34;)]
+    for path in env_paths:
+        if (Path(path) / driver).exists():
+            self.driver_path = Path(path) / driver
+            found = True
+            break
+    # check current working directory and parent folders
+    if not found:
+        while cwd != cwd.parent:
+            if (cwd / driver).exists():
+                self.driver_path = cwd / driver
+                found = True
+                break
+            cwd = cwd.parent
+        # check top most level
+        if not found and (cwd / driver).exists():
+            self.driver_path = cwd / driver
+            found = True
+    # check child folders (only 1 level down)
+    if not found:
+        for child in Path.cwd().iterdir():
+            if child.is_dir() and (child / driver).exists():
+                self.driver_path = child / driver
+                found = True
+    if not found:
+        warn(f&#34;Could not find {driver}&#34;)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.select"><code class="name flex">
+<span>def <span class="ident">select</span></span>(<span>self, locator: str, method: str, choice: str | int | tuple) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Select a choice from Select element.
+Returns the Select element from the locator string,
+not the option element that is selected.</p>
+<p>:param method: Can be 'value' or 'index'</p>
+<p>:param choice: The option to select.</p>
+<p>If method is 'value', then choice should be
+the html 'value' attribute of the desired option.</p>
+<p>If method is 'index', choice can either be a single
+int for the desired option or it can be a two-tuple.
+If the tuple is provided, a random option between the
+two indicies (inclusive) will be selected.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def select(
+    self, locator: str, method: str, choice: str | int | tuple
+) -&gt; WebElement:
+    &#34;&#34;&#34;Select a choice from Select element.
+    Returns the Select element from the locator string,
+    not the option element that is selected.
+
+    :param method: Can be &#39;value&#39; or &#39;index&#39;
+
+    :param choice: The option to select.
+
+    If method is &#39;value&#39;, then choice should be
+    the html &#39;value&#39; attribute of the desired option.
+
+    If method is &#39;index&#39;, choice can either be a single
+    int for the desired option or it can be a two-tuple.
+    If the tuple is provided, a random option between the
+    two indicies (inclusive) will be selected.&#34;&#34;&#34;
+    element = self.click(locator)
+    match method:
+        case &#34;value&#34;:
+            Select(element).select_by_value(choice)
+        case &#34;index&#34;:
+            if type(choice) == tuple:
+                choice = random.randint(choice[0], choice[1])
+            Select(element).select_by_index(choice)
+    self.chill(self.after_field_wait)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.send_keys"><code class="name flex">
+<span>def <span class="ident">send_keys</span></span>(<span>self, locator: str, data: str, click_first: bool = True, clear_first: bool = False) ‑> selenium.webdriver.remote.webelement.WebElement</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Types data into element and returns the element.</p>
+<p>:param data: The string to send to the element.</p>
+<p>:param click_first: If True, the element is clicked on
+before the data is sent.</p>
+<p>:param clear_first: If True, the current text of the element
+is cleared before the data is sent.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_keys(
+    self,
+    locator: str,
+    data: str,
+    click_first: bool = True,
+    clear_first: bool = False,
+) -&gt; WebElement:
+    &#34;&#34;&#34;Types data into element and returns the element.
+
+    :param data: The string to send to the element.
+
+    :param click_first: If True, the element is clicked on
+    before the data is sent.
+
+    :param clear_first: If True, the current text of the element
+    is cleared before the data is sent.&#34;&#34;&#34;
+    element = self.click(locator) if click_first else self.find(locator)
+    if clear_first:
+        element.clear()
+        self.chill(self.after_click_wait)
+    if self.one_key_at_a_time:
+        for ch in str(data):
+            element.send_keys(ch)
+            self.chill(self.after_key_wait)
+    else:
+        element.send_keys(str(data))
+    self.chill(self.after_field_wait)
+    return element</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.set_implicit_wait"><code class="name flex">
+<span>def <span class="ident">set_implicit_wait</span></span>(<span>self, wait_time: int = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets to default time if no arg given.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_implicit_wait(self, wait_time: int = None):
+    &#34;&#34;&#34;Sets to default time if no arg given.&#34;&#34;&#34;
+    if not wait_time:
+        self.browser.implicitly_wait(self.implicit_wait)
+    else:
+        self.browser.implicitly_wait(wait_time)</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.solve_recaptcha_v3"><code class="name flex">
+<span>def <span class="ident">solve_recaptcha_v3</span></span>(<span>self, outer_iframe_xpath: str = '//iframe[@title="reCAPTCHA"]', inner_iframe_xpath: str = '//iframe[@title="recaptcha challenge expires in two minutes"]')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Pass google recaptcha v3 by solving an audio puzzle.</p>
+<p>:param outer_iframe_xpath: Xpath to the iframe containing the recaptcha checkbox.
+If it's the recaptcha without the initial checkbox that just shows the image puzzle,
+pass None to this argument.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_recaptcha_v3(
+    self,
+    outer_iframe_xpath: str = &#39;//iframe[@title=&#34;reCAPTCHA&#34;]&#39;,
+    inner_iframe_xpath: str = &#39;//iframe[@title=&#34;recaptcha challenge expires in two minutes&#34;]&#39;,
+):
+    &#34;&#34;&#34;Pass google recaptcha v3 by solving an audio puzzle.
+
+    :param outer_iframe_xpath: Xpath to the iframe containing the recaptcha checkbox.
+    If it&#39;s the recaptcha without the initial checkbox that just shows the image puzzle,
+    pass None to this argument.
+
+    &#34;&#34;&#34;
+    locator_method = self.locator_method
+    self.locator_method = &#34;xpath&#34;
+    try:
+        if outer_iframe_xpath:
+            self.switch_to_iframe(outer_iframe_xpath)
+            self.click(&#39;//*[@id=&#34;recaptcha-anchor&#34;]&#39;)
+            self.switch_to_parent_frame()
+        self.switch_to_iframe(inner_iframe_xpath)
+        self.click(&#39;//*[@id=&#34;recaptcha-audio-button&#34;]&#39;)
+        mp3_url = self.find(
+            &#39;//a[@class=&#34;rc-audiochallenge-tdownload-link&#34;]&#39;
+        ).get_attribute(&#34;href&#34;)
+        text = get_text_from_url(mp3_url, &#34;.mp3&#34;)
+        self.send_keys(&#39;//*[@id=&#34;audio-response&#34;]&#39;, text)
+        self.click(&#39;//*[@id=&#34;recaptcha-verify-button&#34;]&#39;)
+    except Exception as e:
+        print(e)
+        raise Exception(&#34;Could not solve captcha&#34;)
+    finally:
+        self.switch_to_parent_frame()
+        self.locator_method = locator_method</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.switch_to_iframe"><code class="name flex">
+<span>def <span class="ident">switch_to_iframe</span></span>(<span>self, locator: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Switch to an iframe from given locator.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def switch_to_iframe(self, locator: str):
+    &#34;&#34;&#34;Switch to an iframe from given locator.&#34;&#34;&#34;
+    self.browser.switch_to.frame(self.find(locator))</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.switch_to_parent_frame"><code class="name flex">
+<span>def <span class="ident">switch_to_parent_frame</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Move up a frame level from current frame.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def switch_to_parent_frame(self):
+    &#34;&#34;&#34;Move up a frame level from current frame.&#34;&#34;&#34;
+    self.browser.switch_to.parent_frame()</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.switch_to_tab"><code class="name flex">
+<span>def <span class="ident">switch_to_tab</span></span>(<span>self, tab_index: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Switch to a tab in browser, zero indexed.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def switch_to_tab(self, tab_index: int):
+    &#34;&#34;&#34;Switch to a tab in browser, zero indexed.&#34;&#34;&#34;
+    self.browser.switch_to.window(self.browser.window_handles[tab_index])
+    self.tab_index = tab_index</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.text"><code class="name flex">
+<span>def <span class="ident">text</span></span>(<span>self, locator: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns text of WebElement.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def text(self, locator: str) -&gt; str:
+    &#34;&#34;&#34;Returns text of WebElement.&#34;&#34;&#34;
+    return self.find(locator).text</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.turbo"><code class="name flex">
+<span>def <span class="ident">turbo</span></span>(<span>self, engage: bool = True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>When engaged, strings will be sent
+to elements all at once and there will be
+no waiting after actions.</p>
+<p>When disengaged, strings will be sent to elements
+'one key at a time' with randomized amounts of
+time between successive keys and after actions.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def turbo(self, engage: bool = True):
+    &#34;&#34;&#34;When engaged, strings will be sent
+    to elements all at once and there will be
+    no waiting after actions.
+
+    When disengaged, strings will be sent to elements
+    &#39;one key at a time&#39; with randomized amounts of
+    time between successive keys and after actions.&#34;&#34;&#34;
+    if engage:
+        self.after_key_wait = (0, 0)
+        self.after_field_wait = (0, 0)
+        self.after_click_wait = (0, 0)
+        self.arrival_wait = (1, 1)
+        self.one_key_at_a_time = False
+        self.turbo_engaged = True
+    else:
+        self.after_key_wait = (0.1, 0.5)
+        self.after_field_wait = (1, 2)
+        self.after_click_wait = (0.25, 1.5)
+        self.arrival_wait = (4, 10)
+        self.one_key_at_a_time = True
+        self.turbo_engaged = False</code></pre>
+</details>
+</dd>
+<dt id="seleniumuser.seleniumuser.User.wait_until"><code class="name flex">
+<span>def <span class="ident">wait_until</span></span>(<span>self, condition: function, max_wait: float = 10, polling_interval: float = 0.1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks condition repeatedly until either it is true,
+or the max_wait is exceeded.</p>
+<p>Raises a TimeoutError if the condition doesn't success within max_wait.</p>
+<p>Useful for determing whether a form has been successfully submitted.</p>
+<p>:param condition: The condition function to check.</p>
+<p>:param max_wait: Number of seconds to continue checking condition
+before throwing a TimeoutError.</p>
+<p>:param polling_interval: The number of seconds to sleep before
+checking the condition function again after it fails.</p>
+<p>e.g. self.wait_until(lambda: 'Successfully Submitted' in self.text('//p[@id="form-output"]))</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def wait_until(
+    self, condition: LambdaType, max_wait: float = 10, polling_interval: float = 0.1
+):
+    &#34;&#34;&#34;Checks condition repeatedly until either it is true,
+    or the max_wait is exceeded.
+
+    Raises a TimeoutError if the condition doesn&#39;t success within max_wait.
+
+    Useful for determing whether a form has been successfully submitted.
+
+    :param condition: The condition function to check.
+
+    :param max_wait: Number of seconds to continue checking condition
+    before throwing a TimeoutError.
+
+    :param polling_interval: The number of seconds to sleep before
+    checking the condition function again after it fails.
+
+    e.g. self.wait_until(lambda: &#39;Successfully Submitted&#39; in self.text(&#39;//p[@id=&#34;form-output&#34;]))&#34;&#34;&#34;
+    start_time = time.time()
+    while True:
+        try:
+            if condition():
+                time.sleep(1)
+                break
+            elif (time.time() - start_time) &gt; max_wait:
+                raise TimeoutError(f&#34;max_wait exceeded in wait_until({condition})&#34;)
+            else:
+                time.sleep(polling_interval)
+        except:
+            if (time.time() - start_time) &gt; max_wait:
+                raise TimeoutError(f&#34;max_wait exceeded in wait_until({condition})&#34;)
+            else:
+                time.sleep(polling_interval)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="seleniumuser" href="index.html">seleniumuser</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="seleniumuser.seleniumuser.User" href="#seleniumuser.seleniumuser.User">User</a></code></h4>
+<ul class="">
+<li><code><a title="seleniumuser.seleniumuser.User.chill" href="#seleniumuser.seleniumuser.User.chill">chill</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.clear" href="#seleniumuser.seleniumuser.User.clear">clear</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.click" href="#seleniumuser.seleniumuser.User.click">click</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.click_elements" href="#seleniumuser.seleniumuser.User.click_elements">click_elements</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.close_browser" href="#seleniumuser.seleniumuser.User.close_browser">close_browser</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.close_tab" href="#seleniumuser.seleniumuser.User.close_tab">close_tab</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.configure_chrome" href="#seleniumuser.seleniumuser.User.configure_chrome">configure_chrome</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.configure_firefox" href="#seleniumuser.seleniumuser.User.configure_firefox">configure_firefox</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.current_url" href="#seleniumuser.seleniumuser.User.current_url">current_url</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.delete_cookies" href="#seleniumuser.seleniumuser.User.delete_cookies">delete_cookies</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.dismiss_alert" href="#seleniumuser.seleniumuser.User.dismiss_alert">dismiss_alert</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.fill_next" href="#seleniumuser.seleniumuser.User.fill_next">fill_next</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.find" href="#seleniumuser.seleniumuser.User.find">find</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.find_children" href="#seleniumuser.seleniumuser.User.find_children">find_children</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.get" href="#seleniumuser.seleniumuser.User.get">get</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.get_click_list" href="#seleniumuser.seleniumuser.User.get_click_list">get_click_list</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.get_length" href="#seleniumuser.seleniumuser.User.get_length">get_length</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.get_num_tabs" href="#seleniumuser.seleniumuser.User.get_num_tabs">get_num_tabs</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.get_soup" href="#seleniumuser.seleniumuser.User.get_soup">get_soup</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.open_browser" href="#seleniumuser.seleniumuser.User.open_browser">open_browser</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.open_tab" href="#seleniumuser.seleniumuser.User.open_tab">open_tab</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.remove" href="#seleniumuser.seleniumuser.User.remove">remove</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.script" href="#seleniumuser.seleniumuser.User.script">script</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.scroll" href="#seleniumuser.seleniumuser.User.scroll">scroll</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.scroll_into_view" href="#seleniumuser.seleniumuser.User.scroll_into_view">scroll_into_view</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.search_for_driver" href="#seleniumuser.seleniumuser.User.search_for_driver">search_for_driver</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.select" href="#seleniumuser.seleniumuser.User.select">select</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.send_keys" href="#seleniumuser.seleniumuser.User.send_keys">send_keys</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.set_implicit_wait" href="#seleniumuser.seleniumuser.User.set_implicit_wait">set_implicit_wait</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.solve_recaptcha_v3" href="#seleniumuser.seleniumuser.User.solve_recaptcha_v3">solve_recaptcha_v3</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.switch_to_iframe" href="#seleniumuser.seleniumuser.User.switch_to_iframe">switch_to_iframe</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.switch_to_parent_frame" href="#seleniumuser.seleniumuser.User.switch_to_parent_frame">switch_to_parent_frame</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.switch_to_tab" href="#seleniumuser.seleniumuser.User.switch_to_tab">switch_to_tab</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.text" href="#seleniumuser.seleniumuser.User.text">text</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.turbo" href="#seleniumuser.seleniumuser.User.turbo">turbo</a></code></li>
+<li><code><a title="seleniumuser.seleniumuser.User.wait_until" href="#seleniumuser.seleniumuser.User.wait_until">wait_until</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
