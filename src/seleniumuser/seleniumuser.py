@@ -9,7 +9,6 @@ from typing import Any
 from warnings import warn
 
 from bs4 import BeautifulSoup
-from noiftimer import Timer
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -20,6 +19,8 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import Select
+
+from noiftimer import Timer
 from voxscribe import get_text_from_url
 from whosyouragent import get_agent
 
