@@ -1,3 +1,4 @@
+import atexit
 import os
 import random
 import sys
@@ -8,6 +9,7 @@ from typing import Any
 from warnings import warn
 
 from bs4 import BeautifulSoup
+from noiftimer import Timer
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -18,8 +20,6 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import Select
-
-from noiftimer import Timer
 from voxscribe import get_text_from_url
 from whosyouragent import get_agent
 
@@ -104,6 +104,7 @@ class User:
             self.open_browser()
         else:
             self.browser = None
+        atexit.register(self.close_browser)
 
     def __enter__(self):
         return self
@@ -233,8 +234,10 @@ class User:
 
     def close_browser(self):
         """Close browser window."""
-        self.browser_open = False
-        self.browser.quit()
+        if self.browser_open:
+            self.browser_open = False
+            self.browser.quit()
+        (Path.cwd() / "atexit_worked.txt").touch()
 
     def open_tab(self, url: str = "", switch_to_tab: bool = True):
         """Opens new tab and, if provided, goes to url.
