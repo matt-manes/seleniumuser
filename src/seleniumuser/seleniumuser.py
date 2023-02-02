@@ -237,7 +237,6 @@ class User:
         if self.browser_open:
             self.browser_open = False
             self.browser.quit()
-        (Path.cwd() / "atexit_worked.txt").touch()
 
     def open_tab(self, url: str = "", switch_to_tab: bool = True):
         """Opens new tab and, if provided, goes to url.
