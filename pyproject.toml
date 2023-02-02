@@ -6,16 +6,9 @@ build-backend = "hatchling.build"
 name = "seleniumuser"
 authors = [{name="Matt Manes"}]
 description = "Selenium wrapper to streamline usage."
-version = "1.0.0"
+version = "1.0.1"
 requires-python = ">=3.10"
-dependencies = [
-
-	"bs4~=0.0.1",
-	"selenium~=4.5.0",
-	"noiftimer~=1.0.1",
-	"voxscribe~=1.0.0",
-	"whosyouragent~=1.0.3"
-]
+dependencies = ["bs4~=0.0.1", "noiftimer~=1.0.1", "selenium~=4.5.0", "voxscribe~=1.0.0", "whosyouragent~=1.0.3", "pytest~=7.2.1"]
 keywords = [
     "selenium",
     "automation",
