@@ -1,6 +1,21 @@
 # Changelog
 
-## 1.0.3 (2023-02-05)
+## 1.1.0 (2023-04-03)
+
+#### New Features
+
+* add random 'click' chance option to fill_next
+
+
+## v1.0.4 (2023-03-22)
+
+#### Others
+
+* build v1.0.4
+* update readme
+
+
+## v1.0.3 (2023-02-05)
 
 #### Fixes
 
@@ -8,6 +23,8 @@
 * add readme field to pyproject.toml
 #### Others
 
+* build v1.0.3
+* update changelog
 * build v1.0.2
 * build v1.0.2
 
