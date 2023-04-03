@@ -548,6 +548,17 @@ class User:
         An item in data can also be 'skip', which will perform no action on the current
         WebElement and will continue to the next one.
 
+        An item in data can also be 'click=n', where 'n' is an integer b/t 0 and 100,
+        representing a percent chance an element will be clicked or skipped:
+        >>> user.fill_next(["click=70"])
+
+        has a 70% chance of being
+        >>> user.fill_next([user.keys.SPACE])
+
+        and a 30% chance of being
+        >>> user.fill_next(["skip"])
+
+
         :param start_element: The WebElement to start tabbing from.
         The currently active element will be used if start_element is None.
 
@@ -564,6 +575,12 @@ class User:
             element.send_keys(Keys.TAB)
             element = self.browser.switch_to.active_element
             self.chill(self.after_key_wait)
+            if type(datum) == str and datum.strip().startswith("click="):
+                chance = int(datum.split("=")[1].strip())
+                if random.randint(0, 100) <= chance:
+                    datum = Keys.SPACE
+                else:
+                    datum = "skip"
             if datum[0] == "downArrow":
                 if type(datum[1]) == tuple:
                     times = random.randint(datum[1][0], datum[1][1])
@@ -575,6 +592,7 @@ class User:
             elif datum == "skip":
                 self.chill(self.after_key_wait)
             else:
+
                 if self.turbo_engaged:
                     element.send_keys(str(datum))
                 else:
