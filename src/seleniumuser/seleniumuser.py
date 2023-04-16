@@ -88,8 +88,6 @@ class User:
         self.implicit_wait = implicit_wait
         self.page_load_timeout = page_load_timeout
         self.rotation_timer = Timer()
-        self.timer = Timer()
-        self.timer.start()
         self.randomize_user_agent = randomize_user_agent
         self.user_agent_rotation_period = user_agent_rotation_period
         self.locator_method = locator_method
@@ -269,8 +267,7 @@ class User:
         if (
             self.randomize_user_agent
             and self.user_agent_rotation_period is not None
-            and self.rotation_timer.check(format=False)
-            > (60 * self.user_agent_rotation_period)
+            and self.rotation_timer.elapsed > (60 * self.user_agent_rotation_period)
         ):
             self.rotation_timer.stop()
             self.close_browser()
