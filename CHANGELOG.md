@@ -1,10 +1,21 @@
 # Changelog
 
-## 1.1.0 (2023-04-03)
+## 1.1.1 (2023-04-16)
+
+#### Fixes
+
+* update noiftimer usage
+
+
+## v1.1.0 (2023-04-03)
 
 #### New Features
 
 * add random 'click' chance option to fill_next
+#### Others
+
+* build v1.1.0
+* update changelog
 
 
 ## v1.0.4 (2023-03-22)
