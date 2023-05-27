@@ -390,7 +390,7 @@ class User:
     def scroll_into_view(self, locator: str) -> WebElement:
         """Scrolls to a given element and returns the element."""
         element = self.find(locator)
-        self.script("arguments[0].scroll_into_view();", element)
+        self.script("arguments[0].scrollIntoView();", element)
         self.chill(self.after_click_wait)
         return element
 
