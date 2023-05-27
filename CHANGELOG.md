@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.2 (2023-05-27)
+
+#### Fixes
+
+* fix accidental snake case conversion in javascript function
+
 ## v1.1.1 (2023-04-16)
 
 #### Fixes
