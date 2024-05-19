@@ -8,7 +8,7 @@ authors = [{name="Matt Manes"}]
 description = "Selenium wrapper to streamline usage."
 version = "1.1.2"
 requires-python = ">=3.10"
-dependencies = ["bs4", "selenium", "noiftimer", "voxscribe", "whosyouragent", "pytest"]
+dependencies = ["bs4", "selenium==4.5.0", "noiftimer", "voxscribe", "whosyouragent"]
 keywords = [
     "selenium",
     "automation",
@@ -37,5 +37,9 @@ exclude = [
     ".coverage",
     ".pytest_cache",
     ".vscode",
-    "tests"
+    "tests",
+    "htmlcov",
+    "docs",
+    "*log*",
+    "*.md"
 ]
