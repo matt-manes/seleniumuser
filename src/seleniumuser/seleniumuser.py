@@ -158,12 +158,13 @@ class User:
         found = False
         match self.browser_type:
             case "firefox":
-                driver = "geckodriver.exe"
+                driver = "geckodriver"
             case "chrome":
-                driver = "chromedriver.exe"
+                driver = "chromedriver"
         # search PATH
         env_path = os.environ["PATH"]
         if sys.platform == "win32":
+            driver = f"{driver}.exe"
             env_paths = env_path.split(";")
         else:
             env_paths = env_path.split(":")
@@ -616,7 +617,8 @@ class User:
         :param polling_interval: The number of seconds to sleep before
         checking the condition function again after it fails.
 
-        e.g. self.wait_until(lambda: 'Successfully Submitted' in self.text('//p[@id="form-output"]))"""
+        e.g. self.wait_until(lambda: 'Successfully Submitted' in self.text('//p[@id="form-output"]))
+        """
         start_time = time.time()
         while True:
             try:
