@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.1.4 (2025-06-20)
+
+#### Fixes
+
+* only add '.exe' to driver path when searching on windows
+
+#### Refactorings
+
+* remove chrome test
+
+#### Others
+
+* add to gitignore
+* add stub file
+
 ## v1.1.3 (2024-05-19)
 
 #### Others
