@@ -168,7 +168,6 @@ class User:
             env_paths = env_path.split(";")
         else:
             env_paths = env_path.split(":")
-            driver = driver[: driver.find(".")]
         for path in env_paths:
             if (Path(path) / driver).exists():
                 self.driver_path = Path(path) / driver
